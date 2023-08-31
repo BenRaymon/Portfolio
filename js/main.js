@@ -1,8 +1,8 @@
 emailjs.init('k9WxJCQVmWam_yGDh');
 
-// Stick Navbar
+// Sticky Navbar
 // window.onscroll = function () {
-//     let sticky = $(".menu").height() + 50;
+//     let sticky = $(".menu").height();
 
 //     if (window.scrollY > sticky) {
 //         $(".menu").addClass("navbar-fixed");

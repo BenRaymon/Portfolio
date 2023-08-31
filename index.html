@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raymon</title>
 
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive_styles.css">
 
 </head>
 
@@ -26,7 +26,7 @@
 <body>
 
     <header class="header-area">
-        <div class="menu">
+        <div class="menu navbar-fixed">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <a class="navbar-brand" href="#">Raymon</a>
@@ -64,7 +64,7 @@
             <div class="row">
 
                 <div class="col-lg-7">
-                    <div class="about-text">
+                    <div class="about-text pb-2">
                         <h2>Hey</h2>
                         <h1 class="my-3">I'm Ben Raymon</h1>
                         <h3 class="mb-4">Software Engineer</h3>
@@ -90,7 +90,7 @@
 
                 <div class="col-lg-5">
                     <div class="about-image">
-                        <img src="./assets/about2.png" class='w-100'>
+                        <img src="./assets/about.png" class='w-100'>
                     </div>
                 </div>
 
@@ -306,14 +306,14 @@
         <div class="container">
             <h1 class="section-heading">Experience</h1>
 
-            <div class="timeline mx-4">
+            <div class="timeline">
                 <div class="timeline-wrapper">
                     <div class="timeline-badge"></div>
                     <div class="timeline-content">
                         <div class="info">
                             <h3 class="timeline-company">Amazon</h3>
-                            <h5 class="title">Software Development Engineer Intern</h5>
-                            <h5 class="years">June 2022 - August 2022</h5>
+                            <h5 class="timeline-title">Software Development Engineer Intern</h5>
+                            <h5 class="timeline-years">June 2022 - August 2022</h5>
                             <p>At Amazon, I played a crucial role in optimizing our systems and enhancing the debugging
                                 process of support engineers. By creating an <strong>ad-hoc query tool</strong>, I
                                 streamlined the resolution of downstream exceptions in API requests, leading to a
@@ -348,8 +348,8 @@
                     <div class="timeline-content">
                         <div class="info">
                             <h3 class="timeline-company">Agilent Technologies</h3>
-                            <h5 class="title">Software Developer Intern</h5>
-                            <h5 class="years">June 2021 - February 2022</h5>
+                            <h5 class="timeline-title">Software Developer Intern</h5>
+                            <h5 class="timeline-years">June 2021 - February 2022</h5>
                             <p>My primary objective was to prove the viability of migrating <a target="_blank"
                                     href="https://www.agilent.com/cs/library/whitepaper/public/wp-8890-8860-9000-browser%20interface-5994-4758en-agilent.pdf">Agilent's
                                     GC Browser UI</a> from
@@ -379,8 +379,8 @@
                     <div class="timeline-content">
                         <div class="info">
                             <h3 class="timeline-company">University of Delaware</h3>
-                            <h5 class="title">Lab Assistant</h5>
-                            <h5 class="years">September 2020 - May 2021</h5>
+                            <h5 class="timeline-title">Lab Assistant</h5>
+                            <h5 class="timeline-years">September 2020 - May 2021</h5>
                             <p>
                                 During my time as an undergraduate at UD, I embraced the position of Lab Assistant for
                                 the courses <strong><em>Introduction to Computer Science</em></strong> in
@@ -408,8 +408,8 @@
                     <div class="timeline-content">
                         <div class="info">
                             <h3 class="timeline-company">Shoptaki</h3>
-                            <h5 class="title">Software Developer Intern</h5>
-                            <h5 class="years">December 2020 - February 2021</h5>
+                            <h5 class="timeline-title">Software Developer Intern</h5>
+                            <h5 class="timeline-years">December 2020 - February 2021</h5>
                             <p>As an unpaid intern, I participated in the advancement of <a
                                     href="https://www.shoptaki.com/products/" target="_blank">Shoptaki's
                                     SmartID</a> mobile application. My active contributions included leading the
@@ -503,7 +503,7 @@
         <div class="footer-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10 col-sm-8">
+                    <div class="col-lg-9 col-md-8">
                         <div class="footer-block name">
                             <a href="../#" class="d-inline-block mb-30">
                                 <h1> Ben Raymon </h1>
@@ -511,7 +511,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2 col-sm-4">
+                    <div class="col-lg-3 col-md-4">
                         <div class="footer-block">
                             <ul>
                                 <li>
