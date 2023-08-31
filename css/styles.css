@@ -327,6 +327,17 @@ section {
     background: none;
 }
 
+.down-arrow {
+    display: none;
+    margin-top: 1.5rem;
+    font-size: 3.4rem;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.down-arrow:hover {
+    color: var(--primary-color2);
+}
 
 /** EXPERIENCE **/
 .experience {

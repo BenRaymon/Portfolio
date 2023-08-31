@@ -20,7 +20,22 @@
         max-height: 100%;
     }
 
+    .owl-carousel .owl-dots {
+        margin-top: 1.5rem;
+    }
+
     .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next,
+    .owl-carousel .owl-nav .owl-prev::before,
+    .owl-carousel .owl-nav .owl-next::before {
+        display: none;
+    }
+
+    .down-arrow {
+        display: block;
+    }
+
+    /* .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         margin-bottom: 1rem;
     }
@@ -30,7 +45,7 @@
         position: relative;
         top: 20px;
         font-size: 2rem;
-    }
+    } */
 
     .project-content .title {
         font-size: 1.4rem;
