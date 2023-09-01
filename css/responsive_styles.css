@@ -1,10 +1,15 @@
 @media (max-width:425px) {
 
-    /* html {
+    html {
         font-size: 95%;
-    } */
+    }
 
-    .primary-btn {
+    .home {
+        padding-top: 8rem;
+    }
+
+    .primary-btn,
+    .secondary-btn {
         padding: 1rem 2.5rem;
     }
 
@@ -34,18 +39,6 @@
     .down-arrow {
         display: block;
     }
-
-    /* .owl-carousel .owl-nav .owl-prev,
-    .owl-carousel .owl-nav .owl-next {
-        margin-bottom: 1rem;
-    }
-
-    .owl-carousel .owl-nav .owl-prev:before,
-    .owl-carousel .owl-nav .owl-next:before {
-        position: relative;
-        top: 20px;
-        font-size: 2rem;
-    } */
 
     .project-content .title {
         font-size: 1.4rem;
