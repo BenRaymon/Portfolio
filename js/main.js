@@ -1,15 +1,62 @@
-emailjs.init('k9WxJCQVmWam_yGDh');
+// Fixed Navbar
+let navHeight = $('.menu').height();
+window.onscroll = function () {
+    if (window.scrollY > 0) {
+        $(".menu").addClass("navbar-fixed");
+    } else {
+        $(".menu").removeClass("navbar-fixed");
+    }
+};
 
-// Sticky Navbar
-// window.onscroll = function () {
-//     let sticky = $(".menu").height();
+// Add shadow under expanded navbar
+$('.navbar-toggler').on('click', (event) => {
+    if ($('.menu').height() == navHeight) {
+        $('.menu').addClass('expanded');
+    } else {
+        $('.menu').removeClass('expanded');
+    }
+});
 
-//     if (window.scrollY > sticky) {
-//         $(".menu").addClass("navbar-fixed");
-//     } else {
-//         $(".menu").removeClass("navbar-fixed");
-//     }
-// };
+// Collapse navbar and set active tab
+$('.nav-link').on('click', (event) => {
+    $('.navbar-collapse').collapse('hide');
+    $('.nav-link').removeClass('active');
+    event.target.classList.add('active');
+});
+
+// Check if section is active / in view
+function elementInView(elem) {
+    return $(window).scrollTop() > $(elem).offset().top - 50
+        && $(window).scrollTop() < $(elem).offset().top + $(elem).height();
+};
+
+// Update navbar for active section after scroll
+let timer = null;
+$(window).scroll((event) => {
+
+    if (timer !== null) {
+        clearTimeout(timer);
+    }
+
+    timer = setTimeout(function () {
+        let tabs = ['home', 'projects', 'experience', 'contact'];
+        for (let tab of tabs) {
+            if (elementInView($(`.${tab}`))) {
+                $('.nav-link').removeClass('active');
+                $(`#${tab}-tab`).addClass('active');
+
+                if (history.pushState) {
+                    history.pushState(null, null, `#${tab}`);
+                }
+                else {
+                    window.location.hash = `#!${tab}`;
+                }
+                return;
+            }
+        }
+    }, 150);
+
+});
 
 
 // Initialize Owl Carousel
@@ -28,6 +75,8 @@ $('.owl-carousel').owlCarousel({
 
 
 /* Send Email - Contact Form */
+emailjs.init('k9WxJCQVmWam_yGDh');
+
 async function sendEmail(formElement) {
     let res = await emailjs.sendForm('service_xl0wobg', 'template_q4xfwvm', formElement);
     console.log(res);
